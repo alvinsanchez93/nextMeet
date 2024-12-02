@@ -1,0 +1,37 @@
+﻿<Window x:Class="NextMeet.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inicio de Sesión - NextMeet" Height="400" Width="600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F9FAFB">
+    <Grid>
+        <!-- Título del Login -->
+        <TextBlock Text="Inicio de Sesión" FontSize="24" FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"/>
+
+        <!-- Formulario -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+            <!-- Campo Usuario -->
+            <TextBox x:Name="txtUsuario" Height="40" Background="White" Foreground="Gray" Padding="10" Margin="0,10"
+                     Text="Usuario" GotFocus="TxtUsuario_GotFocus" LostFocus="TxtUsuario_LostFocus"/>
+
+            <!-- Campo Contraseña -->
+            <Grid Height="40" Margin="0,10" Background="White">
+                <PasswordBox x:Name="txtContrasena" Background="Transparent" Padding="10" GotFocus="TxtContrasena_GotFocus" LostFocus="TxtContrasena_LostFocus"/>
+                <TextBlock x:Name="placeholderContrasena" Text="Contraseña" Foreground="Gray" VerticalAlignment="Center" Margin="15,0,0,0"
+                           IsHitTestVisible="False" Opacity="0.6" Visibility="Visible"/>
+            </Grid>
+
+            <!-- Botón Ingresar -->
+            <Button Content="Iniciar Sesión" Width="150" Height="40" Margin="0,10"
+                    Background="#3A86FF" Foreground="White" FontWeight="SemiBold"
+                    Click="BtnIngresar_Click"/>
+
+            <!-- Etiqueta de Error -->
+            <TextBlock x:Name="lblError" Text="Credenciales incorrectas"
+                       Foreground="Red" Visibility="Collapsed" HorizontalAlignment="Center"
+                       Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="NextMeet.Views.MainMenuView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Menú Principal - NextMeet" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4F4F4">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Menú Principal" FontSize="24" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <!-- Botones de opciones -->
+            <Button Content="Gestionar Reservaciones" Width="200" Height="50" Margin="10"
+                    Background="#3A86FF" Foreground="White"/>
+            <Button Content="Gestionar Oficinas" Width="200" Height="50" Margin="10"
+                    Background="#3A86FF" Foreground="White"/>
+            <Button Content="Salir" Width="200" Height="50" Margin="10"
+                    Background="Red" Foreground="White" Click="BtnSalir_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
